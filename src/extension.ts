@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext): void {
     const statusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 0);
     statusBar.command = 'mira-terminal.open';
     statusBar.text = '$(terminal)';
-    statusBar.tooltip = 'Open Mira Terminal (Ctrl+Alt+T)';
+    statusBar.tooltip = 'Open MiraNova Terminal (Ctrl+Alt+T)';
     statusBar.show();
     context.subscriptions.push(statusBar);
 
@@ -74,8 +74,8 @@ function loadAssets(extensionPath: string): { xtermJs: string; xtermCss: string;
 }
 
 // Resolve a CWD saved from a previous session into a path the PTY can use.
-// Git Bash OSC 7 emits Unix-style paths like 'c/Work/mira-terminal' (lowercase
-// drive, no leading slash). Convert those to 'C:/Work/mira-terminal' on Windows.
+// Git Bash OSC 7 emits Unix-style paths like 'c/Work/miranova-terminal' (lowercase
+// drive, no leading slash). Convert those to 'C:/Work/miranova-terminal' on Windows.
 // Falls back to the workspace folder / home dir if the path no longer exists.
 function resolveSavedCwd(savedCwd: string | undefined): string {
     const fallback = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath ?? os.homedir();
@@ -155,7 +155,7 @@ function attachTerminalToPanel(
     try {
         assets = loadAssets(context.extensionPath);
     } catch (err) {
-        vscode.window.showErrorMessage(`Mira Terminal: failed to load xterm assets: ${err}`);
+        vscode.window.showErrorMessage(`MiraNova Terminal: failed to load xterm assets: ${err}`);
         panel.dispose();
         return;
     }
@@ -228,7 +228,7 @@ function attachTerminalToPanel(
             })(),
         });
     } catch (err) {
-        vscode.window.showErrorMessage(`Mira Terminal: failed to spawn shell: ${err}`);
+        vscode.window.showErrorMessage(`MiraNova Terminal: failed to spawn shell: ${err}`);
         panel.dispose();
         return;
     }
@@ -364,12 +364,12 @@ function buildWebviewHtml(assets: { xtermJs: string; xtermCss: string; fitJs: st
     try {
       const webglAddon = new WebglAddon.WebglAddon();
       webglAddon.onContextLoss(() => {
-        console.warn('[MiraTerminal] WebGL context lost, falling back to canvas');
+        console.warn('[MiraNovaTerminal] WebGL context lost, falling back to canvas');
         webglAddon.dispose();
       });
       term.loadAddon(webglAddon);
     } catch (e) {
-      console.warn('[MiraTerminal] WebGL not available, using canvas:', e);
+      console.warn('[MiraNovaTerminal] WebGL not available, using canvas:', e);
     }
 
     function fitAndNotify() {

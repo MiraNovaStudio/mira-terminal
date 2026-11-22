@@ -1,6 +1,6 @@
 {
-  "name": "mira-terminal",
-  "displayName": "Mira Terminal",
+  "name": "miranova-terminal",
+  "displayName": "MiraNova Terminal",
   "description": "Clean tabbed terminal for running Claude Code or whatever, by MiraNova Studio.",
   "version": "0.3.1",
   "publisher": "miranovastudio",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aeonath/mira-terminal"
+    "url": "https://github.com/MiraNovaStudio/miranova-terminal"
   },
   "icon": "icon.png",
   "categories": [
@@ -23,14 +23,14 @@
     "commands": [
       {
         "command": "mira-terminal.open",
-        "title": "Open Mira Terminal",
-        "category": "Mira Terminal",
+        "title": "Open MiraNova Terminal",
+        "category": "MiraNova Terminal",
         "icon": "$(terminal)"
       },
       {
         "command": "mira-terminal.newTab",
         "title": "New Terminal",
-        "category": "Mira Terminal"
+        "category": "MiraNova Terminal"
       }
     ],
     "keybindings": [
@@ -63,12 +63,12 @@
       ]
     },
     "configuration": {
-      "title": "Mira Terminal",
+      "title": "MiraNova Terminal",
       "properties": {
         "mira-terminal.showCwdInTitle": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "Show the current working directory (folder name) in the terminal tab title. e.g. `[icon] mira-terminal/`"
+          "markdownDescription": "Show the current working directory (folder name) in the terminal tab title. e.g. `[icon] miranova-terminal/`"
         },
         "mira-terminal.autoCopySelection": {
           "type": "boolean",

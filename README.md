@@ -1,4 +1,4 @@
-# Mira Terminal
+# MiraNova Terminal
 
 VSCode Extension | MiraNova Studio
 
@@ -35,7 +35,7 @@ A VSCode extension that opens a full terminal in a dedicated editor tab — powe
 2. Open VSCode
 3. Open the Extensions view (`Ctrl+Shift+X`)
 4. Click the `...` menu → **Install from VSIX...**
-5. Select the generated `mira-terminal-0.2.7.vsix`
+5. Select the generated `miranova-terminal-0.3.1.vsix`
 
 ---
 
@@ -45,7 +45,7 @@ A VSCode extension that opens a full terminal in a dedicated editor tab — powe
 |---|---|
 | Open a terminal tab | `Ctrl+Alt+T` |
 | Open via status bar | Click `$(terminal)` icon in the lower-left status bar |
-| Open via command palette | `Ctrl+Shift+P` → **Mira Terminal: Open Mira Terminal** |
+| Open via command palette | `Ctrl+Shift+P` → **MiraNova Terminal: Open MiraNova Terminal** |
 | Open from terminal panel | Click `$(terminal)` in the integrated terminal title bar, or right-click a terminal tab |
 | Open another terminal | Run the command again — each invocation is an independent session |
 | Close the terminal | Close the tab or type `exit` in the shell |
@@ -56,7 +56,7 @@ The terminal opens in the active editor column. The shell starts in the current 
 
 ## Shell Configuration
 
-Mira Terminal reads your VSCode `settings.json` to determine which shell to launch.
+MiraNova Terminal reads your VSCode `settings.json` to determine which shell to launch.
 
 ### Default (no configuration required)
 
@@ -80,7 +80,7 @@ First, install [Git for Windows](https://git-scm.com/download/win). Then add the
 }
 ```
 
-Mira Terminal will pick up the `Git Bash` profile automatically on next launch — no extension restart needed.
+MiraNova Terminal will pick up the `Git Bash` profile automatically on next launch — no extension restart needed.
 
 ---
 
@@ -95,7 +95,7 @@ Mira Terminal will pick up the `Git Bash` profile automatically on next launch �
 
 ```bash
 # Clone or navigate to the project directory
-cd mira-terminal
+cd miranova-terminal
 
 # Install dependencies, compile TypeScript, and package the VSIX in one step
 npm run build
@@ -104,7 +104,7 @@ npm run build
 This runs:
 1. `npm install` — installs all dependencies (including prebuilt `@lydell/node-pty` binaries for your platform)
 2. `npm run compile` — compiles TypeScript to `out/`
-3. `vsce package` — bundles everything into `mira-terminal-0.2.7.vsix`
+3. `vsce package` — bundles everything into `miranova-terminal-0.3.1.vsix`
 
 ### Individual scripts
 
@@ -121,7 +121,7 @@ npm run package   # compile + vsce package (skips npm install)
 ## Project Structure
 
 ```
-mira-terminal/
+miranova-terminal/
 ├── src/
 │   └── extension.ts       # All extension logic
 ├── out/                   # Compiled JavaScript (generated, gitignored)
@@ -192,7 +192,7 @@ PTY output flows from the extension host to the webview via `panel.webview.postM
 
 ## Extension Settings
 
-Access via **Preferences → Settings → Extensions → Mira Terminal**, or add directly to `settings.json`.
+Access via **Preferences → Settings → Extensions → MiraNova Terminal**, or add directly to `settings.json`.
 
 | Setting | Type | Default | Description |
 |---|---|---|---|
@@ -206,8 +206,8 @@ Access via **Preferences → Settings → Extensions → Mira Terminal**, or add
 When enabled the tab title updates to `shell — foldername` as you navigate, e.g.:
 
 ```
-mira-terminal/    ← bash / Git Bash
-mira-terminal\    ← PowerShell
+miranova-terminal/    ← bash / Git Bash
+miranova-terminal\    ← PowerShell
 ```
 
 To enable, add this to your `settings.json`:

@@ -1,4 +1,4 @@
-# Building and Publishing Mira Terminal
+# Building and Publishing MiraNova Terminal
 
 ## Prerequisites
 
@@ -30,8 +30,8 @@ npm run package:windows    # win32-x64
 ```
 
 This produces:
-- `mira-terminal-linux-x64-<version>.vsix`
-- `mira-terminal-win32-x64-<version>.vsix`
+- `miranova-terminal-linux-x64-<version>.vsix`
+- `miranova-terminal-win32-x64-<version>.vsix`
 
 ## Publish to Marketplace
 
@@ -45,8 +45,8 @@ Option B — publish pre-built VSIXes (after `npm run package:all`):
 
 ```bash
 npx vsce publish --packagePath \
-  mira-terminal-linux-x64-*.vsix \
-  mira-terminal-win32-x64-*.vsix
+  miranova-terminal-linux-x64-*.vsix \
+  miranova-terminal-win32-x64-*.vsix
 ```
 
 ## Version Bump
