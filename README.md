@@ -1,6 +1,6 @@
 # Mira Terminal
 
-VSCode Extension | MiraNova Studios
+VSCode Extension | MiraNova Studio
 
 A VSCode extension that opens a full terminal in a dedicated editor tab — powered by a real PTY via `node-pty` and rendered with `xterm.js`. Designed to play well with vim, TUI applications, and anything that needs a proper pseudo-terminal.
 
@@ -275,4 +275,4 @@ When enabled, the cursor will blink. Disabled by default.
 
 ## License
 
-MIT © 2026 MiraNova Studios — see [LICENSE](LICENSE) for full text.
+MIT © 2026 MiraNova Studio — see [LICENSE](LICENSE) for full text.

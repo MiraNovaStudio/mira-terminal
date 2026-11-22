@@ -1,4 +1,4 @@
-// Copyright (c) 2026 MiraNova Studios
+// Copyright (c) 2026 MiraNova Studio
 
 import * as vscode from 'vscode';
 import * as pty from '@lydell/node-pty';

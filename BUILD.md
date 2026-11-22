@@ -5,7 +5,7 @@
 - Node.js installed
 - Logged in to the VS Code Marketplace:
   ```bash
-  npx vsce login miranovastudios
+  npx vsce login miranovastudio
   ```
   You'll need a Personal Access Token from https://dev.azure.com — scoped to **Marketplace > Manage**.
 

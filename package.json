@@ -1,9 +1,9 @@
 {
   "name": "mira-terminal",
   "displayName": "Mira Terminal",
-  "description": "Clean tabbed terminal for running Claude Code or whatever.",
+  "description": "Clean tabbed terminal for running Claude Code or whatever, by MiraNova Studio.",
   "version": "0.3.1",
-  "publisher": "miranovastudios",
+  "publisher": "miranovastudio",
   "engines": {
     "vscode": "^1.96.0"
   },
